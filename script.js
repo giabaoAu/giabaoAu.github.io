@@ -1,62 +1,23 @@
-"use strict";
+const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
 
-const titleElement = document.querySelector(".title");
-const buttonsContainer = document.querySelector(".buttons");
-const yesButton = document.querySelector(".btn--yes");
-const noButton = document.querySelector(".btn--no");
-const catImg = document.querySelector(".cat-img");
-
-const MAX_IMAGES = 5;
-
-let play = true;
-let noCount = 0;
-
-yesButton.addEventListener("click", handleYesClick);
-
-noButton.addEventListener("click", function () {
-  if (play) {
-    noCount++;
-    const imageIndex = Math.min(noCount, MAX_IMAGES);
-    changeImage(imageIndex);
-    resizeYesButton();
-    updateNoButtonText();
-    if (noCount === MAX_IMAGES) {
-      play = false;
-    }
-  }
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "Cảm ơn công chúaaaaa";
+  gif.src =
+    "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
 });
 
-function handleYesClick() {
-  titleElement.innerHTML = "Chloe đáng iu nhắm nhunnn đóoooo :3";
-  buttonsContainer.classList.add("hidden");
-  changeImage("yes");
-}
+noBtn.addEventListener("mouseover", () => {
+  const noBtnRect = noBtn.getBoundingClientRect();
+  const maxX = window.innerWidth - noBtnRect.width;
+  const maxY = window.innerHeight - noBtnRect.height;
 
-function resizeYesButton() {
-  const computedStyle = window.getComputedStyle(yesButton);
-  const fontSize = parseFloat(computedStyle.getPropertyValue("font-size"));
-  const newFontSize = fontSize * 1.6;
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-  yesButton.style.fontSize = `${newFontSize}px`;
-}
-
-function generateMessage(noCount) {
-  const messages = [
-    "Không Bao Giờ",
-    "Tui bicc lỗi rồi ạa",
-    "Mong chloe tha lỗi choo toai :((",
-    "Tui saii rồi , tui đáng trách ạ",
-    "Bé đừng giận tui nữa nhoo",
-  ];
-
-  const messageIndex = Math.min(noCount, messages.length - 1);
-  return messages[messageIndex];
-}
-
-function changeImage(image) {
-  catImg.src = `img/cat-${image}.jpg`;
-}
-
-function updateNoButtonText() {
-  noButton.innerHTML = generateMessage(noCount);
-}
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+});
