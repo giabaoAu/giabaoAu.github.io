@@ -8,6 +8,8 @@ yesBtn.addEventListener("click", () => {
   question.innerHTML = "Cảm ơn công chúaaaaa";
   gif.src =
     "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/gif.webp";
+    const audio = document.getElementById('yes-music');
+    audio.play();
 });
 
 noBtn.addEventListener("mouseover", () => {
