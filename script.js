@@ -22,9 +22,7 @@ noBtn.addEventListener("mouseover", () => {
 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
-});
 
-window.onload = () => {
-    const audio = document.getElementById('background-music');
-    audio.play()
-  };
+  const audio = document.getElementById('background-music');
+  audio.play();
+});
