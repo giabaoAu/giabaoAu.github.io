@@ -22,7 +22,4 @@ noBtn.addEventListener("mouseover", () => {
 
   noBtn.style.left = randomX + "px";
   noBtn.style.top = randomY + "px";
-
-  const audio = document.getElementById('background-music');
-  audio.play();
 });
