@@ -58,3 +58,4 @@ Things I have learnt:
                                 --> About
 3. Buiding a page using different components (eg. import navBar component)
 4. Apply a grid and dot background from Aceternity UI ( check utils.ts)
+5. Export a function then use in different component/sections of the page (eg: Title.tsx)
