@@ -14,7 +14,7 @@ export default function HeroSection() {
                 </h1>
                 <p className="md:w-96 text-lg text-gray-300">
                     {
-                        "Based in the heart of South Australia, I'm a Computer Science at the University of Adelaide. I am passionate programmer that build mordern application that users love!"
+                        "Based in the heart of South Australia, I'm a Computer Science at the University of Adelaide. A passionate software developer that builds mordern applications users love!"
                     }
                 </p>
                 <Link className='inline-block group' href={"mailto:bao.au135@gmail.com"}>

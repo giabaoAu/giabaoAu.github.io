@@ -2,11 +2,12 @@ import React from 'react'
 import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import Skills from './components/Skills'
+import Projects from './components/Projects'
 
 export default function page() {
   return (
-
-    <div className="min-h-screen bg-black overflow-hidden">
+    // update 400vh to screen later
+    <div className="min-h-[400vh] bg-black overflow-hidden">
       <div className='dark:bg-black bg-white  dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative'>
         <div className=" max-w-7xl mx-auto p-5">
           <NavBar />
@@ -19,6 +20,7 @@ export default function page() {
 
       <div className="max-w-7xl mx-auto p-5 mt-20">
         <Skills />
+        <Projects />
       </div>
 
     </div>
