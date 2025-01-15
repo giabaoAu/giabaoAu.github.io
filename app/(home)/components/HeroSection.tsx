@@ -17,7 +17,7 @@ export default function HeroSection() {
                         "Based in the heart of South Australia, I'm a Computer Science at the University of Adelaide. A passionate software developer that builds mordern applications users love!"
                     }
                 </p>
-                <Link className='inline-block group' href={"mailto:bao.au135@gmail.com"}>
+                <Link className='inline-block group p-3' href={"mailto:bao.au135@gmail.com"}>
                     <Titles text='Contact Me 📬' />
                 </Link>
             </div>

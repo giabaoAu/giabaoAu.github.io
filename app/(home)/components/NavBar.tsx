@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import { link } from 'fs';
 import Link from 'next/link';
 import React from 'react'
@@ -5,7 +6,7 @@ import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
 
-export default function NavBar() {
+export default function NavBar({className}:{className?:string}) {
 
     const socials = [
         {
@@ -26,7 +27,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className=" py-10 flex justify-between items-center">
+        <nav className={cn(" py-10 flex justify-between items-center", className)}>
             <h1 className="text-2xl font-bold underline underline-offset-8 decoration-green-500">Samuel 👨‍🚀</h1>
 
             <div className="flex items-center gap-5">

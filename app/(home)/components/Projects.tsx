@@ -12,7 +12,7 @@ export default function Projects() {
             title: "Weather App API",
             tech: [SiNextdotjs, SiReactquery, SiSupabase, SiTailwindcss],
             Link: "http://localhost:3000/",
-            cover: "/p1.png",
+            cover: "/p1_resized.png",
             background: "bg-indigo-500",
         },
 
@@ -20,7 +20,7 @@ export default function Projects() {
             title: "To Do List",
             tech: [SiJavascript, SiSupabase, SiTailwindcss],
             Link: "http://localhost:3000/",
-            cover: "/p2.png",
+            cover: "/p2_resized.png",
             background: "bg-green-500",
         },
     ]
@@ -35,11 +35,13 @@ export default function Projects() {
                     return <Link href={project.Link} key={index}>
                         <div className={cn("p-5 rounded-md cursor-pointer", project.background)}>
                             <DirectionAwareHover imageUrl={project.cover} className='w-full space-y-5'>
-                                <h1>{project.title}</h1>
-                                <div className='flex items-center gap-5'>
-                                    {project.tech.map((Icon, index) => {
-                                        return <Icon key={index} />;
-                                    })}
+                                <div className='space-y-5'>
+                                    <h1 className='text-xl font-bold'>{project.title}</h1>
+                                    <div className='flex items-center gap-5'>
+                                        {project.tech.map((Icon, index) => {
+                                            return <Icon className="w-8 h-8" key={index} />;
+                                        })}
+                                    </div>
                                 </div>
                             </DirectionAwareHover>
                         </div>
