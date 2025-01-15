@@ -39,7 +39,7 @@ export default function Projects() {
                                     <h1 className='text-xl font-bold'>{project.title}</h1>
                                     <div className='flex items-center gap-5'>
                                         {project.tech.map((Icon, index) => {
-                                            return <span className="w-8 h-8">
+                                            return <span key={index} className="w-8 h-8">
                                                 <Icon key={index} size={32}/>
                                             </span> 
                                         })}

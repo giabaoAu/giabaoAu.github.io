@@ -33,7 +33,9 @@ export default function NavBar({className}:{className?:string}) {
                 {socials.map((social, index) => {
                     const Icon = social.Icon
                     return <Link href={social.links} key={index} aria-label={social.Label}>
-                        <Icon className="w-5 h-5 hover:scale-125 transition-all" />
+                        <span className="w-5 h-5 hover:scale-125 transition-all">
+                            <Icon />
+                        </span>
                     </Link>
                 })}
             </div>

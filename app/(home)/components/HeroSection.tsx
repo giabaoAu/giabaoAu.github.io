@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import { MovingBorderBtn } from './ui/moving-border';
 import Titles from './Titles';
 
 export default function HeroSection() {
@@ -34,12 +33,6 @@ export default function HeroSection() {
                     </div>
                     <div className='glow absolute top-[40%] right-1/2 -z-10'></div>
                 </div>
-
-                {/* <div className='absolute bottom-5 sm:left-10 sm:bottom-14 left-0'>
-                    <MovingBorderBtn className="p-3 font-semibold" borderRadius='0.5rem'>
-                        <p>📢💼 Available for work</p>
-                    </MovingBorderBtn>
-                </div> */}
             </div>
 
         </div>
